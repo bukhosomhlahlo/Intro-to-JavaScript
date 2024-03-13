@@ -1,4 +1,4 @@
-#Day 1
+# Day 1
 ## Variables, Operators & Assignments
 # Variables
 <p>Variables are containers for storing data values. They are used to label and store information that can be referenced and manipulated in a program.</p>
