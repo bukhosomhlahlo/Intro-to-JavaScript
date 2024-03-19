@@ -135,7 +135,7 @@ myArray[0] = 10; // Updates the first element to 10
 <p>function greet(name) {
     console.log("Hello, " + name + "!");
 }</p>
-##### Function Expresion: 
+<h5>Function Expresion: </h5>
 
 <p>Functions can also be defined using function expressions, where a function is assigned to a variable. For example:</p>
 
@@ -158,7 +158,7 @@ myArray[0] = 10; // Updates the first element to 10
 <p>function add(a, b) {
     return a + b;
 }</p>
-##### Return Statement: 
+<h5> Return Statement: </h5>
 
 <p>Functions can return a value using the return statement. When a function encounters a return statement, it immediately exits and returns the specified value. For example:</p>
 
