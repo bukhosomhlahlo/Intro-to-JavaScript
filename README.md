@@ -123,6 +123,65 @@ When assigning a new value to a specific index to update the element.
 
 myArray[0] = 10; // Updates the first element to 10
 
+# Day 3
+## Functons
+
+<p>In JavaScript, functions are blocks of reusable code that perform a specific task or calculate a value. This avoids the need to write the same code again and over. It assists programmers in building modular code. Functions allow a programmer to break a large program into smaller, more manageable functions.
+ JavaScript, like any other modern programming language, has all of the capabilities required to construct modular code with functions. You must have seen functions such as alert() and write() in previous chapters. We used these methods repeatedly, but they had only been defined in core JavaScript once. JavaScript also allows us to define custom functions.</p>
+
+##### Function Declaration: 
+<p>Functions in JavaScript can be declared using the function keyword followed by the function name, parameters (if any), and the function body enclosed in curly braces. For example:</p>
+
+<p>function greet(name) {
+    console.log("Hello, " + name + "!");
+}</p>
+##### Function Expresion: 
+
+<p>Functions can also be defined using function expressions, where a function is assigned to a variable. For example:</p>
+
+<p>const greet = function(name) {
+    console.log("Hello, " + name + "!");
+};</p>
+
+##### Anonymous Functions: 
+
+<p>Functions without a name are called anonymous functions. They are often used as callback functions or immediately invoked function expressions (IIFE). For example:</p>
+
+<p>setTimeout(function() {
+    console.log("This is an anonymous function.");
+}, 1000);</p>
+
+
+##### Function Parameters: 
+<p>Functions can accept zero or more parameters, which are placeholders for values that the function will work with. Parameters are listed within the parentheses of the function declaration. For example:</p>
+
+<p>function add(a, b) {
+    return a + b;
+}</p>
+##### Return Statement: 
+
+<p>Functions can return a value using the return statement. When a function encounters a return statement, it immediately exits and returns the specified value. For example:</p>
+
+<p>function add(a, b) {
+    return a + b;
+}</p>
+
+##### Function Invocation: 
+
+<p>Functions are executed or called using their name followed by parentheses (). For example:</p>
+
+<p>greet("John");</p>
+
+<ul><li><strong>Scope</strong>: Functions introduce their own scope in JavaScript. Variables declared within a function are local to that function by default and cannot be accessed from outside the function unless explicitly returned or using closure.</li>
+
+<li><strong>Hoisting</strong>: Function declarations are hoisted in JavaScript, meaning they are moved to the top of their containing scope during the compilation phase. This allows you to call a function before it is declared in your code.</li>
+
+<li><strong>Nested Functions</strong>: JavaScript allows functions to be nested within other functions. These nested functions have access to the variables and parameters of their containing (outer) function, which can be useful for creating closures.</li>
+
+<li><strong>Arguments Object</strong>: Functions in JavaScript have access to a special arguments object, which is an array-like object containing all the arguments passed to the function. This object can be used to access arguments dynamically, even if they are not explicitly defined in the function signature.</li></ul>
+
+<i>Functions are fundamental building blocks in JavaScript, providing a way to organize and reuse code, encapsulate functionality, and create modular and maintainable codebases.</i>
+
 
 
 
