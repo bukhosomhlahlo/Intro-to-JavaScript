@@ -1,6 +1,6 @@
 # Day 1
-# Variables, Operators & Assignments
-## Variables
+## Variables, Operators & Assignments
+### Variables
 <p>Variables are containers for storing data values. They are used to label and store information that can be referenced and manipulated in a program.</p>
 
 <p>In JavaScript, variables are declared using the var, let, or const keywords.</p>
@@ -361,6 +361,38 @@ if (condition2) {
     // code to execute if condition2 is true
 }
 // more if statements or other logic
+
+<h1>Week 2</h1>
+<h2>Introduction to HTML, CSS and Javascript</h2>
+<h3>Type Conversions</h3>
+
+
+##### String Conversion:
+
+<p>Any value in JavaScript can be converted to a string using the String() function or by using the toString() method available on most objects.</p>
+let value = true; 
+alert(typeof value); // boolean  
+value = String(value); // now value is a string "true"  
+alert(typeof value); // string  
+
+##### Numeric Conversion:
+Values in JavaScript can be converted to numbers using the Number() function or by using the unary plus (+) operator.
+If the conversion is not possible, JavaScript will return NaN (Not a Number).
+For example:
+
+let str = "123";
+alert(typeof str); //  string
+let num = Number(str); // becomes a number 123  
+alert(typeof num); // number 
+
+OR
+
+Number("123");  // 123
++"123";  // 123
+Number("hello");  // NaN
+
+Numeric conversion rules:  
+
 
 
 
