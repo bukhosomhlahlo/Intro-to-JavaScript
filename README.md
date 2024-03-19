@@ -391,7 +391,28 @@ Number("123");  // 123
 +"123";  // 123
 Number("hello");  // NaN
 
-Numeric conversion rules:  
+##### Numeric conversion rules:  
+
+ <table><tr><th>Value</th><th>Becomes</th></tr><tr><td>undefined </td><td>NaN</td></tr><tr><td>Null</td><td>0</td></tr><tr><td>true and false</td><td>1 and 0</td></tr><tr><td>string</td><td>Whitespaces from the start and end are removed. If the remaining string is empty, the result is 0. Otherwise, the number is “read” from the string. An error gives NaN.  </td></tr></table>
+
+<p>Examples:</p> 
+
+alert( Number("123") ); // 123  
+alert( Number("123z") ); // NaN (error reading a number at "z")  
+alert( Number(true) );  // 1  
+alert( Number(false) );  // 0 
+
+##### Boolean conversion:
+
+
+<p>Values in JavaScript can be converted to booleans using the Boolean() function or by using the double negation (!!) operator.
+Any value that is considered "falsy" (e.g., 0, "", null, undefined, NaN) will be converted to false. All other values will be converted to true.</p>
+For example:
+
+Boolean(123);  // true
+!!0;  // false
+
+
 
 
 
