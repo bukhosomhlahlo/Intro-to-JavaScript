@@ -425,5 +425,5 @@ alert( Boolean(1) ); // true 
 
 <i>However, some JavaScript number format methods are specifically used on numbers only.</i>  
 
-<table><tr><th>Method</th><th>Description</th></tr><tr><td>toString()</td><td>Return number as string</td></tr><tr><td>toExponential</td><td>Return string with number rounded and written with exponential notation.</td></tr><tr><td>toFixed</td><td>Return string with number rounded and written using a specified number of decimals.</td></tr>tr><td>toPrecision</td><td>Return string with a number written with a specified length</td></tr>tr><td>valueOf</td><td>Return number as a number.</td></tr>
+<table><tr><th>Method</th><th>Description</th></tr><tr><td>toString()</td><td>Return number as string</td></tr><tr><td>toExponential</td><td>Return string with number rounded and written with exponential notation.</td></tr><tr><td>toFixed</td><td>Return string with number rounded and written using a specified number of decimals.</td></tr><tr><td>toPrecision</td><td>Return string with a number written with a specified length</td></tr><tr><td>valueOf</td><td>Return number as a number.</td></tr>
 
