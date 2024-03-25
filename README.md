@@ -412,6 +412,17 @@ For example:
 Boolean(123);  // true
 !!0;  // false
 
+alert( Boolean(0) ); // false 
+alert( Boolean("hello") ); // true  
+alert( Boolean("") ); // false  
+alert( Boolean(1) ); // true 
+
+##### Formatting Numbers
+<p>When choosing a method for formatting numbers in JavaScript, consider factors such as locale requirements, precision, performance, and the level of customization needed. Use built-in methods for basic formatting tasks and consider third-party libraries for more advanced scenarios.</p>
+
+ <table><tr><th>Method</th><th>Description</th></tr><tr><td>Number()</td><td>Return number converted from its argument</td></tr><tr><td>parseFloat</td><td>arse its argument and return a float</td></tr><tr><td>parseInt()</td><td>Parse its argument and returns an integer</td></tr>
+
+
 
 
 
