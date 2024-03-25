@@ -791,6 +791,113 @@ Zero-fill Right Shift (>>>): Shifts the bits of the left operand to the right by
 console.log(-5 >>> 1); // Output: 2147483645 (binary: 11111111111111111111111111111011 >>> 1 = 01111111111111111111111111111101)
 These bitwise operators are used in scenarios where manipulation of individual bits is necessary, such as low-level programming, cryptography, and optimization. They are particularly useful when working with binary data and bitwise flags.
 
+![image](https://github.com/bukhosomhlahlo/Intro-to-JavaScript/assets/159022974/95107d6f-48f2-41c0-b75e-20226051b9f1)
+
+### The Document Object Model
+
+Event Propagation
+handleCheck = e => { 
+
+  e.stopPropagation() 
+
+  // talk to my API, set the record as "done" or not 
+
+} 
+
+<span onClick={this.handleCheck}>[]</span> 
+
+That e.stopPropagation() halts this “bubbling” of events “up” through the DOM. We stop all the events from the parents occurring.
+
+
+##### Event Deligation
+
+Event delegation is a technique in JavaScript where instead of attaching an event handler to each individual element, you attach a single event handler to a parent element. This handler then listens for events bubbling up from child elements. Event delegation is particularly useful when you have a large number of elements that need the same event handling logic, or when elements are dynamically added or removed from the DOM.
+
+
+Attach Event Listener to Parent Element: You attach an event listener to a parent element that contains the child elements you want to target.
+
+Event Bubbling: When an event occurs on a child element, it bubbles up through its ancestors, triggering event handlers on each ancestor element.
+
+Check Event Target: In the event handler attached to the parent element, you check the event.target property to determine which specific child element triggered the event.
+
+Perform Action: Based on the event.target, you perform the desired action.
+
+
+<ul id="parentList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+<script>
+    // Attach event listener to parent element
+    document.getElementById('parentList').addEventListener('click', function(event) {
+        // Check if the clicked element is an <li> element
+        if (event.target.tagName === 'LI') {
+            // Perform action (e.g., toggle class)
+            event.target.classList.toggle('highlight');
+        }
+    });
+</script>
+In this example:
+
+<ul><li>We attach a click event listener to the &lt;ul&gt; element with the id parentList.</li>
+<li>When a click event occurs on any &lt;li&gt element within the &lt;ul&gt, the event bubbles up to the &lt;ul&gt; element, triggering the event handler.</li>
+<li>We check if the clicked element (event.target) is an &lt;li&gt; element.</li>
+<li>If it is, we perform an action, such as toggling a class.,</li></ul>
+  
+Event delegation reduces the number of event handlers needed, resulting in cleaner and more efficient code, especially in scenarios where elements are dynamically added or removed. It also simplifies the management of event handling logic for multiple elements.
+
+In JavaScript, you can use regular expressions (regex) with methods like match(), test(), search(), replace(), and split() to perform various operations on strings. When it comes to finding items in a webpage using regular expressions, you typically use them in combination with methods like querySelectorAll() or getElementsByTagName() to select elements from the DOM and then apply regex to the content of those elements.
+
+# Day 3
+## JavaScript Forms
+In JavaScript, methods are functions that are defined within objects and are invoked on those objects. The this keyword is used within methods to refer to the current object the method is being called on. Understanding how methods work with the this keyword is essential for object-oriented programming in JavaScript. Here's an explanation of JavaScript methods and the this keyword:
+
+#### Methods in JavaScript:
+<p>Definition: Methods are functions that are associated with objects. They are defined within the context of an object and can access the object's properties and other methods.</p>.
+
+Syntax:
+
+const object = {
+    property1: value1,
+    property2: value2,
+    methodName: function() {
+        // Method body
+    }
+};
+Invocation: Methods are invoked using dot notation (object.methodName()) or bracket notation (object['methodName']()).
+
+The this Keyword:
+Definition: The this keyword refers to the current object context within which a function is called. It dynamically points to different objects depending on how the function is called.
+
+Usage: Inside a method, this refers to the object on which the method is being invoked.
+
+Example:
+
+const person = {
+    name: 'Alice',
+    greet: function() {
+        console.log('Hello, my name is ' + this.name);
+    }
+};
+person.greet(); // Output: Hello, my name is Alice
+Binding: The value of this is determined by how a function is called, not where it is defined. It can be explicitly bound to a specific object using methods like call(), apply(), or bind().
+
+#### Using this in Methods:
+
+Accessing Object Properties: Inside a method, this allows access to the object's properties and other methods.
+
+Modifying Object State: Methods can use this to modify the state of the object they belong to.
+
+Dynamic Context: The value of this is determined dynamically at runtime based on how the method is called, allowing for flexible and reusable code.
+
+Understanding JavaScript methods and the this keyword is crucial for creating object-oriented code and leveraging the power of objects in JavaScript programming.
+
+
+
+
+
 
 
 
