@@ -421,11 +421,11 @@ alert( Boolean(1) ); // true 
 ##### Formatting Numbers
 <p>When choosing a method for formatting numbers in JavaScript, consider factors such as locale requirements, precision, performance, and the level of customization needed. Use built-in methods for basic formatting tasks and consider third-party libraries for more advanced scenarios.</p>
 
- <table><tr><th>Method</th><th>Description</th></tr><tr><td>Number()</td><td>Return number converted from its argument</td></tr><tr><td>parseFloat()</td><td>parse its argument and return a float</td></tr><tr><td>parseInt()</td><td>Parse its argument and returns an integer</td></tr>
+<table><tr><th>Method</th><th>Description</th></tr><tr><td>Number()</td><td>Return number converted from its argument</td></tr><tr><td>parseFloat()</td><td>parse its argument and return a float</td></tr><tr><td>parseInt()</td><td>Parse its argument and returns an integer</td></tr>
 
- <i>However, some JavaScript number format methods are specifically used on numbers only.</i>  
+<i>However, some JavaScript number format methods are specifically used on numbers only.</i>  
 
-  <table><tr><th>Method</th><th>Description</th></tr><tr><td>toString()</td><td>Return number as string</td></tr><tr><td>toExponential</td><td>Return string with number rounded and written with exponential notation.</td></tr><tr><td>toFixed</td><td>Return string with number rounded and written using a specified number of decimals.</td></tr>tr><td>toPrecision</td><td>Return string with a number written with a specified length</td></tr>tr><td>valueOf</td><td>Return number as a number.</td></tr>
+<table><tr><th>Method</th><th>Description</th></tr><tr><td>toString()</td><td>Return number as string</td></tr><tr><td>toExponential</td><td>Return string with number rounded and written with exponential notation.</td></tr><tr><td>toFixed</td><td>Return string with number rounded and written using a specified number of decimals.</td></tr>tr><td>toPrecision</td><td>Return string with a number written with a specified length</td></tr>tr><td>valueOf</td><td>Return number as a number.</td></tr>
 
 A JavaScript object refers to any HTML element within a document that can be accessed through JavaScript. This includes not only HTML elements but also the browser window itself, which is also scriptable.
 
@@ -763,38 +763,31 @@ Bitwise operators in JavaScript are used to perform bitwise operations on intege
 
 Bitwise AND (&): Performs a bitwise AND operation on each pair of corresponding bits. The result is 1 if both bits are 1, otherwise 0.
 
-javascript
-Copy code
+
 console.log(5 & 3); // Output: 1 (binary: 101 & 011 = 001)
 Bitwise OR (|): Performs a bitwise OR operation on each pair of corresponding bits. The result is 1 if at least one of the bits is 1.
 
-javascript
-Copy code
+
 console.log(5 | 3); // Output: 7 (binary: 101 | 011 = 111)
 Bitwise XOR (^): Performs a bitwise XOR (exclusive OR) operation on each pair of corresponding bits. The result is 1 if the bits are different, otherwise 0.
 
-javascript
-Copy code
+
 console.log(5 ^ 3); // Output: 6 (binary: 101 ^ 011 = 110)
 Bitwise NOT (~): Performs a bitwise NOT operation on each bit, inverting its value. It turns 0 into 1 and 1 into 0. Note that it operates on each bit individually, and it flips all bits including the sign bit.
 
-javascript
-Copy code
+
 console.log(~5); // Output: -6 (binary: ~0101 = 1010, in two's complement representation -1010 = -6)
 Left Shift (<<): Shifts the bits of the left operand to the left by a specified number of positions. Zeroes are shifted in from the right.
 
-javascript
-Copy code
+
 console.log(5 << 1); // Output: 10 (binary: 101 << 1 = 1010)
 Sign-propagating Right Shift (>>): Shifts the bits of the left operand to the right by a specified number of positions. The sign bit is used to fill the leftmost positions.
 
-javascript
-Copy code
+
 console.log(5 >> 1); // Output: 2 (binary: 101 >> 1 = 10)
 Zero-fill Right Shift (>>>): Shifts the bits of the left operand to the right by a specified number of positions. Zeroes are shifted in from the left, and the sign bit is ignored.
 
-javascript
-Copy code
+
 console.log(-5 >>> 1); // Output: 2147483645 (binary: 11111111111111111111111111111011 >>> 1 = 01111111111111111111111111111101)
 These bitwise operators are used in scenarios where manipulation of individual bits is necessary, such as low-level programming, cryptography, and optimization. They are particularly useful when working with binary data and bitwise flags.
 
