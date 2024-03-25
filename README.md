@@ -791,34 +791,3 @@ Zero-fill Right Shift (>>>): Shifts the bits of the left operand to the right by
 console.log(-5 >>> 1); // Output: 2147483645 (binary: 11111111111111111111111111111011 >>> 1 = 01111111111111111111111111111101)
 These bitwise operators are used in scenarios where manipulation of individual bits is necessary, such as low-level programming, cryptography, and optimization. They are particularly useful when working with binary data and bitwise flags.
 
-
-![image](https://github.com/bukhosomhlahlo/Intro-to-JavaScript/assets/159022974/eadf3672-aa2d-44fd-9e32-0d0966914703)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
