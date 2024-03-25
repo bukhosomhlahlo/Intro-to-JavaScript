@@ -363,6 +363,7 @@ if (condition2) {
 // more if statements or other logic
 
 <h1>Week 2</h1>
+<h1>Day 1</h1>
 <h2>Introduction to HTML, CSS and Javascript</h2>
 <h3>Type Conversions</h3>
 
@@ -420,7 +421,405 @@ alert( Boolean(1) ); // true 
 ##### Formatting Numbers
 <p>When choosing a method for formatting numbers in JavaScript, consider factors such as locale requirements, precision, performance, and the level of customization needed. Use built-in methods for basic formatting tasks and consider third-party libraries for more advanced scenarios.</p>
 
- <table><tr><th>Method</th><th>Description</th></tr><tr><td>Number()</td><td>Return number converted from its argument</td></tr><tr><td>parseFloat</td><td>arse its argument and return a float</td></tr><tr><td>parseInt()</td><td>Parse its argument and returns an integer</td></tr>
+ <table><tr><th>Method</th><th>Description</th></tr><tr><td>Number()</td><td>Return number converted from its argument</td></tr><tr><td>parseFloat()</td><td>parse its argument and return a float</td></tr><tr><td>parseInt()</td><td>Parse its argument and returns an integer</td></tr>
+
+ <i>However, some JavaScript number format methods are specifically used on numbers only.</i>  
+
+  <table><tr><th>Method</th><th>Description</th></tr><tr><td>toString()</td><td>Return number as string</td></tr><tr><td>toExponential</td><td>Return string with number rounded and written with exponential notation.</td></tr><tr><td>toFixed</td><td>Return string with number rounded and written using a specified number of decimals.</td></tr>tr><td>toPrecision</td><td>Return string with a number written with a specified length</td></tr>tr><td>valueOf</td><td>Return number as a number.</td></tr>
+
+A JavaScript object refers to any HTML element within a document that can be accessed through JavaScript. This includes not only HTML elements but also the browser window itself, which is also scriptable.
+
+Apart from HTML elements, there exist core objects outside the scope of a web page, associated directly with the JavaScript language. Additionally, homemade objects are defined within the JavaScript Object Model alongside core objects. Examples of JavaScript objects include 'window', 'document', 'form', and 'image'.
+
+Properties represent characteristics of objects. They are akin to HTML tag attributes. However, a key difference is that JavaScript properties can also be objects themselves. For instance, a document, a form, or an image, though properties of the window or document object, are considered objects in their own right if they possess their own properties and methods.
+
+Methods are actions applicable directly to objects. In the context of a web page, methods allow for interactive experiences, enhancing user engagement. Methods are denoted by parentheses following their names, with parameters sometimes required to execute specific tasks.
+
+Some common JavaScript methods include 'alert()', 'write()', and 'focus()'. These methods perform actions such as displaying alerts, writing content to a page, and inserting the mouse cursor into a form element.
+
+The DOM (Document Object Model) encompasses APIs (Application Programming Interfaces) for web and XML page scripting. The 'document' and 'window' objects are frequently utilized in DOM programming. The 'window' object represents the browser environment, while the 'document' object serves as the root of the document. Together with the 'Element' interface, these objects offer methods and properties for working with individual elements on a page.
+
+Path references in JavaScript code typically include the 'document' object, given that most objects within a web page are contained within it. However, since the 'document' is contained by the 'window' object, references to the 'window' object are often omitted. This is due to the assumption that methods invoked without specifying the object are intended for the 'window' object, which sits at the top of the object hierarchy.
+
+In summary, the DOM structure involves various objects, properties, and methods that enable interaction and manipulation of web content through JavaScript.
+
+## Day 2
+
+### Javascript APIS
+<p>These are common APIs (Application Programming Interfaces) in web and XML page scripting using the DOM (Document Object Model)</p>
+
+1. `document.getElementById(id)`:
+   - This method retrieves an HTML element with the specified 'id' attribute from the current document.
+
+2. `document.getElementsByTagName(name)`:
+   - This method retrieves a collection of HTML elements with the specified tag name from the current document.
+
+3. `document.createElement(name)`:
+   - This method creates a new HTML element with the specified tag name.
+
+4. `parentNode.appendChild(node)`:
+   - This method appends a new child node to the end of the list of children of a specified parent node.
+
+5. `element.innerHTML`:
+   - This property represents the HTML content (including child elements) of an element.
+
+6. `element.style.left`:
+   - This property sets or returns the left position of a positioned element.
+
+7. `element.setAttribute`:
+   - This method sets the value of an attribute on the specified element.
+
+8. `element.getAttribute`:
+   - This method retrieves the value of the specified attribute on the given element.
+
+9. `element.addEventListener`:
+   - This method attaches an event handler to the specified element, allowing the execution of a specified function when a particular event occurs.
+
+10. `window._content`:
+    - This property represents the content area of the browser window.
+
+11. `window.onload`:
+    - This event occurs when the DOM (Document Object Model) has been fully loaded in the current window.
+
+12. `window.dump()`:
+    - This method displays a message in the JavaScript console or debugging output.
+
+13. `window.scrollTo()`:
+    - This method scrolls the document to a specified set of coordinates (x, y) within the window.
+
+These APIs are essential for manipulating and interacting with HTML elements and documents dynamically using JavaScript. They enable developers to access, create, modify, and handle various aspects of web pages and their content programmatically.
+
+##### Calling one function from another function
+
+<p>Calling one function from another function is a common practice in programming and can be done in various programming languages, including JavaScript.</p>
+
+Here's a basic example in JavaScript:
+
+function firstFunction() {
+    console.log("This is the first function.");
+    
+    // Call the second function
+    secondFunction();
+}
+
+function secondFunction() {
+    console.log("This is the second function.");
+}
+
+// Call the first function to start the sequence
+firstFunction();
+
+
+In this example:
+
+We have two functions: firstFunction() and secondFunction().
+Inside firstFunction(), we call secondFunction() by simply using its name followed by parentheses. This triggers the execution of the secondFunction() code.
+When the firstFunction() is called at the end of the script, it starts the sequence of function calls, which includes calling secondFunction().
+
+The output will be:
+
+
+This is the first function.
+This is the second function.
+
+
+##### Creating pbjects with user-defined functions
+
+In JavaScript, you can create objects using user-defined functions. These functions act as constructors for the objects.
+
+// Define a constructor function for creating Person objects
+function Person(name, age) {
+    this.name = name; // 'this' refers to the current object being created
+    this.age = age;
+    
+    // Define a method for the Person object
+    this.greet = function() {
+        console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
+    };
+}
+
+// Create instances of Person objects using the constructor function
+var person1 = new Person("Alice", 30);
+var person2 = new Person("Bob", 25);
+
+// Access properties and call methods of the created objects
+console.log(person1.name); // Output: Alice
+console.log(person2.age); // Output: 25
+person1.greet(); // Output: Hello, my name is Alice and I am 30 years old.
+person2.greet(); // Output: Hello, my name is Bob and I am 25 years old.
+
+
+In this example:
+
+We define a constructor function called Person which takes name and age parameters.
+Inside the constructor function, we use the this keyword to refer to the current object being created. We assign values to properties (name and age) of the object using this.
+We also define a method greet() within the constructor function, which is added to each object created by the constructor.
+We create two instances of Person objects using the new keyword followed by the constructor function name and passing arguments for name and age.
+We access the properties (name and age) and call the method greet() of the created objects.
+This demonstrates how you can create objects with user-defined functions (constructors) in JavaScript. It's a foundational concept in object-oriented programming with JavaScript.
+
+##### Defining new properties to already-made objects
+
+In JavaScript, you can add new properties to already-existing objects even after they have been created. :
+
+
+// Define an object
+var person = {
+    name: "Alice",
+    age: 30
+};
+
+// Add a new property to the object
+person.city = "New York";
+
+// Add a new method to the object
+person.greet = function() {
+    console.log("Hello, my name is " + this.name + " and I am from " + this.city + ".");
+};
+
+// Access and use the properties and method of the modified object
+console.log(person.name); // Output: Alice
+console.log(person.city); // Output: New York
+person.greet(); // Output: Hello, my name is Alice and I am from New York.
+
+In this example:
+
+We have an object named person with properties name and age.
+We add a new property city to the person object by simply assigning a value to it.
+We also add a new method greet to the person object by assigning a function to it.
+We can then access the newly added property city and call the newly added method greet.
+This demonstrates how you can define new properties and methods to already-made objects in JavaScript, allowing you to dynamically extend the capabilities of objects in our code.
+
+##### Defining properties when you create the object
+
+In JavaScript, you can define properties for an object when you create it using either object literal notation or constructor functions. 
+
+Here are examples of both approaches:
+
+###### Object Literal Notation:
+
+// Define an object with properties
+var person = {
+    name: "Alice",
+    age: 30,
+    city: "New York",
+    greet: function() {
+        console.log("Hello, my name is " + this.name + " and I am from " + this.city + ".");
+    }
+};
+
+// Access and use the properties and method of the object
+console.log(person.name); // Output: Alice
+console.log(person.city); // Output: New York
+person.greet(); // Output: Hello, my name is Alice and I am from New York.
+
+###### Constructor Functions:
+
+// Define a constructor function for creating Person objects
+function Person(name, age, city) {
+    this.name = name;
+    this.age = age;
+    this.city = city;
+    
+    this.greet = function() {
+        console.log("Hello, my name is " + this.name + " and I am from " + this.city + ".");
+    };
+}
+
+// Create an instance of the Person object using the constructor function
+var person = new Person("Alice", 30, "New York");
+
+// Access and use the properties and method of the object
+console.log(person.name); // Output: Alice
+console.log(person.city); // Output: New York
+person.greet(); // Output: Hello, my name is Alice and I am from New York.
+
+In both examples:
+
+We define properties (name, age, city) for the object when creating it.
+In the first example, we directly create the object using object literal notation.
+In the second example, we define a constructor function Person to create Person objects with specified properties and a method.
+These approaches allow us to define properties for objects at the time of object creation in JavaScript.
+
+##### Comparison operators
+
+
+
+Comparison operators in JavaScript are used to compare values and determine the relationship between them. Here's a list of comparison operators in JavaScript:
+
+Equal to (==): Compares whether two values are equal. It performs type coercion, so it may convert the operands to the same type before making the comparison.
+
+
+console.log(5 == 5); // Output: true
+console.log(5 == '5'); // Output: true (Type coercion)
+console.log(5 == 6); // Output: false
+
+Strict equal to (===): Compares whether two values are equal and of the same type.
+
+
+console.log(5 === 5); // Output: true
+console.log(5 === '5'); // Output: false (Type mismatch)
+
+Not equal to (!=): Compares whether two values are not equal. It performs type coercion.
+
+
+console.log(5 != 6); // Output: true
+console.log(5 != '5'); // Output: false (Type coercion)
+
+Strict not equal to (!==): Compares whether two values are not equal or of the same type.
+
+
+console.log(5 !== '5'); // Output: true
+console.log(5 !== 5); // Output: false (Type match)
+Greater than (>): Checks if the left operand is greater than the right operand.
+
+
+console.log(5 > 3); // Output: true
+console.log(5 > 5); // Output: false
+
+Greater than or equal to (>=): Checks if the left operand is greater than or equal to the right operand.
+
+
+console.log(5 >= 5); // Output: true
+console.log(5 >= 3); // Output: true
+
+Less than (<): Checks if the left operand is less than the right operand.
+
+
+console.log(3 < 5); // Output: true
+console.log(5 < 5); // Output: false
+
+Less than or equal to (<=): Checks if the left operand is less than or equal to the right operand.
+
+
+console.log(5 <= 5); // Output: true
+console.log(3 <= 5); // Output: true
+
+These comparison operators are fundamental for creating conditions and controlling the flow of program execution in JavaScript.
+
+##### Arithmetic operators
+
+Arithmetic operators in JavaScript are used to perform mathematical operations on numeric values. Here's a list of arithmetic operators in JavaScript:
+
+Addition (+): Adds two operands.
+
+console.log(5 + 3); // Output: 8
+
+Subtraction (-): Subtracts the right operand from the left operand.
+console.log(5 - 3); // Output: 2
+
+Multiplication (*): Multiplies two operands.
+console.log(5 * 3); // Output: 15
+
+Division (/): Divides the left operand by the right operand.
+console.log(6 / 2); // Output: 3
+
+Modulus (%): Returns the remainder of the division operation.
+console.log(10 % 3); // Output: 1
+
+Increment (++): Increases the value of a variable by 1.
+let x = 5;
+x++;
+console.log(x); // Output: 6
+
+Decrement (--): Decreases the value of a variable by 1.
+let y = 5;
+y--;
+console.log(y); // Output: 4
+
+Exponentiation ()**: Raises the left operand to the power of the right operand.
+console.log(2 ** 3); // Output: 8 (2 raised to the power of 3)
+
+##### Bitwise Operators
+
+These arithmetic operators are fundamental for performing calculations in JavaScript, and they follow the standard rules of arithmetic.
+
+Bitwise operators in JavaScript are used to perform bitwise operations on integer operands. These operations treat the operands as a sequence of bits (binary digits). Here's a list of bitwise operators in JavaScript:
+
+Bitwise AND (&): Performs a bitwise AND operation on each pair of corresponding bits. The result is 1 if both bits are 1, otherwise 0.
+console.log(5 & 3); // Output: 1 (binary: 101 & 011 = 001)
+
+Bitwise OR (|): Performs a bitwise OR operation on each pair of corresponding bits. The result is 1 if at least one of the bits is 1.
+console.log(5 | 3); // Output: 7 (binary: 101 | 011 = 111)
+
+Bitwise XOR (^): Performs a bitwise XOR (exclusive OR) operation on each pair of corresponding bits. The result is 1 if the bits are different, otherwise 0.
+console.log(5 ^ 3); // Output: 6 (binary: 101 ^ 011 = 110)
+
+Bitwise NOT (~): Performs a bitwise NOT operation on each bit, inverting its value. It turns 0 into 1 and 1 into 0. Note that it operates on each bit individually, and it flips all bits including the sign bit.
+console.log(~5); // Output: -6 (binary: ~0101 = 1010, in two's complement representation -1010 = -6)
+
+Left Shift (<<): Shifts the bits of the left operand to the left by a specified number of positions. Zeroes are shifted in from the right.
+console.log(5 << 1); // Output: 10 (binary: 101 << 1 = 1010)
+
+Sign-propagating Right Shift (>>): Shifts the bits of the left operand to the right by a specified number of positions. The sign bit is used to fill the leftmost positions.
+console.log(5 >> 1); // Output: 2 (binary: 101 >> 1 = 10)
+
+Zero-fill Right Shift (>>>): Shifts the bits of the left operand to the right by a specified number of positions. Zeroes are shifted in from the left, and the sign bit is ignored.
+console.log(-5 >>> 1); // Output: 2147483645 (binary: 11111111111111111111111111111011 >>> 1 = 01111111111111111111111111111101)
+
+These bitwise operators are used in scenarios where manipulation of individual bits is necessary, such as low-level programming, cryptography, and optimization. They are particularly useful when working with binary data and bitwise flags.
+
+Bitwise operators in JavaScript are used to perform bitwise operations on integer operands. These operations treat the operands as a sequence of bits (binary digits). Here's a list of bitwise operators in JavaScript:
+
+Bitwise AND (&): Performs a bitwise AND operation on each pair of corresponding bits. The result is 1 if both bits are 1, otherwise 0.
+
+javascript
+Copy code
+console.log(5 & 3); // Output: 1 (binary: 101 & 011 = 001)
+Bitwise OR (|): Performs a bitwise OR operation on each pair of corresponding bits. The result is 1 if at least one of the bits is 1.
+
+javascript
+Copy code
+console.log(5 | 3); // Output: 7 (binary: 101 | 011 = 111)
+Bitwise XOR (^): Performs a bitwise XOR (exclusive OR) operation on each pair of corresponding bits. The result is 1 if the bits are different, otherwise 0.
+
+javascript
+Copy code
+console.log(5 ^ 3); // Output: 6 (binary: 101 ^ 011 = 110)
+Bitwise NOT (~): Performs a bitwise NOT operation on each bit, inverting its value. It turns 0 into 1 and 1 into 0. Note that it operates on each bit individually, and it flips all bits including the sign bit.
+
+javascript
+Copy code
+console.log(~5); // Output: -6 (binary: ~0101 = 1010, in two's complement representation -1010 = -6)
+Left Shift (<<): Shifts the bits of the left operand to the left by a specified number of positions. Zeroes are shifted in from the right.
+
+javascript
+Copy code
+console.log(5 << 1); // Output: 10 (binary: 101 << 1 = 1010)
+Sign-propagating Right Shift (>>): Shifts the bits of the left operand to the right by a specified number of positions. The sign bit is used to fill the leftmost positions.
+
+javascript
+Copy code
+console.log(5 >> 1); // Output: 2 (binary: 101 >> 1 = 10)
+Zero-fill Right Shift (>>>): Shifts the bits of the left operand to the right by a specified number of positions. Zeroes are shifted in from the left, and the sign bit is ignored.
+
+javascript
+Copy code
+console.log(-5 >>> 1); // Output: 2147483645 (binary: 11111111111111111111111111111011 >>> 1 = 01111111111111111111111111111101)
+These bitwise operators are used in scenarios where manipulation of individual bits is necessary, such as low-level programming, cryptography, and optimization. They are particularly useful when working with binary data and bitwise flags.
+
+
+![image](https://github.com/bukhosomhlahlo/Intro-to-JavaScript/assets/159022974/eadf3672-aa2d-44fd-9e32-0d0966914703)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
