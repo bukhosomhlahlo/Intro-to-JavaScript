@@ -1072,7 +1072,19 @@ invalid event handler./td></tr>
 <tr><td>onkeydown</td><td>Invoked when a key was pressed over an element.</td></tr>
 <tr><td>onkeypress</td><td>Invoked when a key was pressed over an element then released.</td></tr>
 <tr><td>onkeyup</td><td>Invoked when a key was released over an element.</td></tr>
+<tr><td>onloadeddata</td><td>Invoked when the browser/user agent can render the media data at the current playback position for the first time..</td></tr>
+<tr><td>onloadedmetadata</td><td>Invoked when the browser/user agent has just determined the duration and dimensions of the media resource.</td></tr>
+<tr><td>onloadstart</td><td>Invoked when the browser/user agent has started loading the media resource.</td></tr>
+<tr><td>onmousedown</td><td>The cursor moved over the object and the mouse/pointing device was pressed down.</td></tr>
+<tr><td>onmouseenter</td><td>The cursor enters the outer element (not the inner element). Therefore, does not fire again if the cursor enters a descendant of this element.</td></tr>
+<tr><td>onmouseleave</td><td>The cursor leaves the element.</td></tr>
 
+
+<tr><td>onmouseout</td><td>The cursor moved off the object</td></tr>
+<tr><td>onmouseover</td><td>The cursor moved over the object (i.e. user hovers the mouse over the object).</td></tr>
+<tr><td>onmouseup</td><td>The mouse/pointing device was released after being pressed down.</td></tr>
+<tr><td>onmousewheel</td><td>Invoked when the media resource has been paused.</td></tr>
+<tr><td>onplay</td><td>Invoked when the media resource starts playback.</td></tr>
 
 
 </table>
