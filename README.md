@@ -1054,7 +1054,7 @@ function handleClick(event) {
 Here, we attach a click event listener to the <ul> element, and the handleClick() function is called when any <li> element inside the list is clicked. We then check if the clicked element is an <li> before performing any action.
 Event handlers play a crucial role in building interactive web applications, allowing you to respond to user actions and create dynamic user experiences.
 
-<table><tr><th>Attribute</th><<th>Description</th></tr></table>
+<table><tr><th>Attribute</th><th>Description</th></tr></table><tr><td>onabort</td></tr>
 
 
 
