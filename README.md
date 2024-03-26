@@ -926,6 +926,35 @@ console.log(validateEmail(email1)); // Output: true
 console.log(validateEmail(email2)); // Output: false
 
 
+The regular expression /^[^\s@]+@[^\s@]+\.[^\s@]+$/ is used for validating email addresses in JavaScript. Let's break down the meaning of each part:
+
+^: Asserts the start of the string.
+
+[^\s@]+: Matches one or more characters that are not whitespace (\s) or @. This part represents the local part of the email address before the @ symbol.
+
+@: Matches the @ symbol.
+
+[^\s@]+: Matches one or more characters that are not whitespace (\s) or @. This part represents the domain name of the email address after the @ symbol.
+
+\.: Matches a literal dot (.). It's escaped with a backslash because dot (.) has a special meaning in regular expressions and needs to be treated as a literal dot.
+
+[^\s@]+: Matches one or more characters that are not whitespace (\s) or @. This part represents the top-level domain (TLD) of the email address.
+
+$: Asserts the end of the string.
+
+Putting it all together, the regular expression ensures that:
+
+The email address starts with one or more characters that are not whitespace or @.
+Followed by an @ symbol.
+Followed by one or more characters that are not whitespace or @.
+Followed by a dot (.).
+Followed by one or more characters that are not whitespace or @.
+Ends with the end of the string.
+This regular expression provides a basic validation for email addresses. However, it's important to note that email address validation can be quite complex due to the variety of valid email formats and internationalization considerations. This regex does not cover all edge cases and may need to be adjusted based on specific requirements.
+
+
+
+
 
 
 
