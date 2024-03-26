@@ -954,6 +954,114 @@ This regular expression provides a basic validation for email addresses. However
 
 # Week 3
 ## Handling Events
+### String Operations
+
+##### Accessing Individual Characters in a String:
+You can access individual characters in a string using bracket notation ([]) or the charAt() method.
+
+Using Bracket Notation:
+
+const str = "Hello";
+
+// Accessing the first character
+const firstChar = str[0];
+console.log(firstChar); // Output: "H"
+
+// Accessing the third character
+const thirdChar = str[2];
+console.log(thirdChar); // Output: "l"
+Using charAt() Method:
+
+const str = "Hello";
+
+// Accessing the first character
+const firstChar = str.charAt(0);
+console.log(firstChar); // Output: "H"
+
+// Accessing the third character
+const thirdChar = str.charAt(2);
+console.log(thirdChar); // Output: "l"
+Comparing Strings:
+You can compare strings in JavaScript using comparison operators (==, ===, !=, !==, <, >, <=, >=) or methods like localeCompare().
+
+Using Comparison Operators:
+
+const str1 = "apple";
+const str2 = "banana";
+
+console.log(str1 === str2); // Output: false
+console.log(str1 < str2); // Output: true (lexicographic comparison)
+Using localeCompare() Method:
+
+const str1 = "apple";
+const str2 = "banana";
+
+console.log(str1.localeCompare(str2)); // Output: -1 (str1 comes before str2)
+When using localeCompare(), it returns:
+
+-1 if the first string comes before the second string alphabetically.
+0 if the strings are equal.
+1 if the first string comes after the second string alphabetically.
+These are basic examples of how you can access individual characters in a string and compare strings in JavaScript. String manipulation and comparison are common tasks in JavaScript programming, and understanding these operations is essential for working with text data effectively.
+
+#### Event Handlers
+
+
+<p>JavaScript event handlers are functions that are invoked in response to specific events occurring in the browser. These events can be triggered by user actions (such as clicks, key presses, mouse movements) or by the browser itself (such as page loading, form submission, etc.). Event handlers allow you to define custom behavior for these events, enabling interactive and dynamic web applications.</p>
+
+There are different ways to attach event handlers to HTML elements in JavaScript:
+
+##### Inline Event Handlers
+
+You can specify event handlers directly within HTML elements using the on prefix followed by the event name as an attribute. For example:
+
+
+<button onclick="handleClick()">Click me</button>
+In this example, the handleClick() function will be called when the button is clicked.
+
+##### DOM Event Handlers
+
+You can use the DOM (Document Object Model) API to attach event handlers programmatically. This method provides more flexibility and separation of concerns compared to inline event handlers. For example:
+
+
+<button id="myButton">Click me</button>
+
+const button = document.getElementById('myButton');
+button.addEventListener('click', handleClick);
+
+function handleClick() {
+    // Event handling logic
+}
+Here, we use addEventListener() to add a click event listener to the button element. When the button is clicked, the handleClick() function will be invoked.
+
+Event Delegation: With event delegation, you attach a single event handler to a parent element, which will then handle events for its child elements. This is particularly useful when you have a large number of elements or dynamically generated content. For example:
+
+
+<ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+const list = document.getElementById('myList');
+list.addEventListener('click', handleClick);
+
+function handleClick(event) {
+    if (event.target.tagName === 'LI') {
+        // Event handling logic
+    }
+}
+Here, we attach a click event listener to the <ul> element, and the handleClick() function is called when any <li> element inside the list is clicked. We then check if the clicked element is an <li> before performing any action.
+Event handlers play a crucial role in building interactive web applications, allowing you to respond to user actions and create dynamic user experiences.
+
+<table><tr><th>Attribute</th></tr><tr><th>Description</th></tr></table>
+
+
+
+
+
+
+
 
 
 
