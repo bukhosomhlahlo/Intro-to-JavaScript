@@ -1054,7 +1054,28 @@ function handleClick(event) {
 Here, we attach a click event listener to the <ul> element, and the handleClick() function is called when any <li> element inside the list is clicked. We then check if the clicked element is an <li> before performing any action.
 Event handlers play a crucial role in building interactive web applications, allowing you to respond to user actions and create dynamic user experiences.
 
-<table><tr><th>Attribute</th><th>Description</th></tr><tr><td>onabort</td><td>onabort</td></tr></table>
+<table><tr><th>Attribute</th><th>Description</th></tr><tr><td>onabort</td><td>Invoked when an event has been aborted. For example, the browser stops fetching media data before it is completely downloaded.</td></tr>
+<tr><td>oncancel</td><td>cancel event handler.</td></tr>
+<tr><td>oncanplay</td><td>Invoked when the browser/user agent can start playing media, but hasn't yet, due to buffering. In other words, if playback were to begin now, it wouldn't play right to the end (due to the current playback rate) - it would need to pause during playback in order to load the rest of the media.</td></tr>
+<tr><td>oncanplaythrough</td><td>The browser/user agent estimates that if playback were to begin now, the media resource could be rendered at the current playback rate all the way to its end without having to stop for further buffering.</td></tr>
+<tr><td>onchange</td><td>cUser has changed the object, then attempts to leave that field (i.e. clicks elsewhere).</td></tr>
+<tr><td>onclick</td><td>Invoked when the user clicked on the object.</td></tr>
+<tr><td>oncuechange</td><td>cuechange event handler.</td></tr>
+<tr><td>ondblclick</td><td>cuechange event handler.Invoked when the user clicked twice on the object.</td></tr>
+<tr><td>ondurationchange</td><td>Invoked when the length of the media is changed (i.e. the duration attribute has just been updated).</td></tr>
+<tr><td>onemptied</td><td>Invoked when a media resource element suddenly becomes empty (for example, due to a network error).</td></tr>
+
+<tr><td>onended</td><td>Invoked when the media has reached the end./td></tr>
+<tr><td>oninput</td><td>input event handler.</td></tr>
+<tr><td>oninvalid</td><td>	
+invalid event handler./td></tr>
+<tr><td>onkeydown</td><td>Invoked when a key was pressed over an element.</td></tr>
+<tr><td>onkeypress</td><td>Invoked when a key was pressed over an element then released.</td></tr>
+<tr><td>onkeyup</td><td>Invoked when a key was released over an element.</td></tr>
+
+
+
+</table>
 
 
 
