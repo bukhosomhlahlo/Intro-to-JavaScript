@@ -1204,6 +1204,245 @@ We attach event listeners to this input field for the keydown, keyup, and keypre
 When these events occur, the corresponding event handler functions are executed, updating the text content of the <p> element to reflect the user's keyboard interactions.
 We can use these keyboard events to create various interactive features on our web pages, such as form validation, autocomplete, or custom keyboard shortcuts.
 
+#### Form Events
+
+Form events in web development are events associated with HTML forms. These events allow you to perform actions based on user interactions with the form elements, such as submitting the form, changing input values, or focusing on input fields. You can handle form events using event listeners in JavaScript.
+
+Here are some common form events:
+
+submit: This event occurs when the user submits a form.
+
+reset: This event occurs when the user clicks the reset button in a form.
+
+change: This event occurs when the value of an input element changes and the element loses focus (for text fields, dropdowns, checkboxes, etc.).
+
+input: This event occurs when the value of an input element changes (including every keystroke) regardless of focus.
+
+focus: This event occurs when an element receives focus (e.g., when a user clicks or tabs into an input field).
+
+blur: This event occurs when an element loses focus (e.g., when a user clicks outside of an input field).
+
+
+&lt;body&gt;
+    &lt;form id="myForm"&gt;
+        &lt;input type="text" id="textInput"&gt;
+        &lt;button type="submit"&gt;Submit&lt;&lt;/button&gt;
+    &lt;/form>
+    &lt;p id="output"&gt;&lt;/p&gt;
+
+   &lt;script&gt;
+        // Get reference to form and output elements
+        var form = document.getElementById("myForm");
+        var output = document.getElementById("output");
+
+        // Event listener for form submit event
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            output.textContent = "Form submitted!";
+        });
+
+        // Event listener for input change event
+        var input = document.getElementById("textInput");
+        input.addEventListener("change", function(event) {
+            output.textContent = "Input changed: " + event.target.value;
+        });
+
+        // Event listener for input focus event
+        input.addEventListener("focus", function(event) {
+            output.textContent = "Input focused";
+        });
+
+        // Event listener for input blur event
+        input.addEventListener("blur", function(event) {
+            output.textContent = "Input blurred";
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+
+
+In this example:
+
+<p>We have a simple form with an input field and a submit button.
+We attach event listeners to the form and input elements for various form events such as submit, change, focus, and blur.
+When these events occur, the corresponding event handler functions are executed, updating the text content of the 'p' element to reflect the user's interactions with the form.
+Form events are commonly used to validate form data, provide feedback to users, or trigger actions based on user input.</p>
+
+#### Document/ Window Events
+
+##### Document Events:
+
+<p>Document events are related to the HTML document itself. Here are some common document events:</p>
+
+DOMContentLoaded: This event occurs when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+
+readystatechange: This event fires when the state of the document changes (such as when it is being loaded or unloaded).
+
+DOMContentLoaded: This event is fired when the DOM is fully loaded, including images and external resources like CSS and JavaScript files.
+
+DOMContentLoaded: This event is fired when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+
+##### Window Events:
+Window events are related to the browser window itself. Here are some common window events:
+
+load: This event occurs when the browser has finished loading all resources (including images, scripts, and stylesheets) in the window.
+
+unload: This event occurs when the user navigates away from the page, either by closing the window/tab or by navigating to another page.
+
+resize: This event occurs when the browser window is resized.
+
+scroll: This event occurs when the user scrolls the window.
+
+Example Usage:
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document and Window Events Example</title>
+</head>
+<body>
+    <p id="output"></p>
+
+    <script>
+        // Document events
+        document.addEventListener("DOMContentLoaded", function(event) {
+            document.getElementById("output").textContent = "DOMContentLoaded event fired!";
+        });
+
+        // Window events
+        window.addEventListener("load", function(event) {
+            document.getElementById("output").textContent += "\nWindow loaded!";
+        });
+
+        window.addEventListener("unload", function(event) {
+            console.log("Window unloaded!");
+        });
+
+        window.addEventListener("resize", function(event) {
+            console.log("Window resized!");
+        });
+
+        window.addEventListener("scroll", function(event) {
+            console.log("Window scrolled!");
+        });
+    </script>
+</body>
+</html>
+In this example:
+
+We have event listeners attached to both the document and the window.
+When the DOM content is loaded (DOMContentLoaded), we update the text content of a paragraph element.
+When the window is fully loaded (load), we append a message to the paragraph element.
+Additionally, we have event listeners for unload, resize, and scroll events attached to the window object, though in this example, they are logging messages to the console.
+These events are useful for performing various tasks in response to user actions or changes in the browser environment.
+
+##### Creating an Image Slider
+
+Creating a simple image slider in JavaScript involves manipulating the DOM to display different images sequentially with some form of navigation control. Below is a basic example of how you can create a simple image slider using JavaScript:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Image Slider</title>
+    <style>
+        /* Styling for the slider container */
+        .slider-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Styling for the images */
+        .slider-container img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        /* Styling for navigation buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border: none;
+            z-index: 100;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+        <!-- Add more images as needed -->
+
+        <!-- Navigation buttons -->
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <script>
+        var currentSlide = 0;
+        var slides = document.querySelectorAll('.slider-container img');
+
+        function showSlide(index) {
+            // Hide all slides
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            // Show the selected slide
+            slides[index].style.display = 'block';
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Show the first slide initially
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
+```
+
+This code creates a simple image slider with previous and next navigation buttons. Here's how it works:
+
+- Images are placed inside a container (`div.slider-container`).
+- Initially, all images are hidden (`display: none;`) except the first one.
+- Navigation buttons (`button.prev` and `button.next`) are provided to navigate to the previous and next images.
+- JavaScript functions `prevSlide()` and `nextSlide()` control the navigation behavior by hiding/showing images accordingly.
+- The `currentSlide` variable keeps track of the index of the currently displayed image.
+- The `showSlide()` function shows the image corresponding to the provided index.
+
+You can add more images to the slider by adding additional `<img>` elements inside the `.slider-container` div.
+
+
+
 
 
 
