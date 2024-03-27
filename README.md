@@ -1109,7 +1109,100 @@ invalid event handler./td></tr>
 
 
 ## Day 2
-#### Dynamic HTML
+### Dynamic HTML
+#### Creating a Date Object:
+
+We can create a Date object in several ways:
+
+Without Arguments: This creates a Date object representing the current date and time.
+
+
+var currentDate = new Date();
+With Arguments: We can specify the year, month, day, hour, minute, second, and millisecond.
+
+
+var specificDate = new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
+Note: Month is zero-based (0 for January, 1 for February, etc.).
+
+Accessing Date Components:
+Once we have a Date object, you can access various components of the date and time:
+
+getDate(): Gets the day of the month (1-31).
+getMonth(): Gets the month (0-11).
+getFullYear(): Gets the year (four digits).
+getHours(): Gets the hour (0-23).
+getMinutes(): Gets the minutes (0-59).
+getSeconds(): Gets the seconds (0-59).
+getMilliseconds(): Gets the milliseconds (0-999).
+getDay(): Gets the day of the week (0 for Sunday, 1 for Monday, etc.).
+Setting Date Components:
+You can also set various components of the date and time:
+
+setDate(day): Sets the day of the month (1-31).
+setMonth(month): Sets the month (0-11).
+setFullYear(year): Sets the year (four digits).
+setHours(hour): Sets the hour (0-23).
+setMinutes(minute): Sets the minutes (0-59).
+setSeconds(second): Sets the seconds (0-59).
+setMilliseconds(millisecond): Sets the milliseconds (0-999).
+Formatting Dates:
+JavaScript provides several methods to format dates:
+
+toDateString(): Converts the date portion of a Date object into a human-readable string.
+toLocaleDateString(): Converts the date portion into a string based on the locale.
+toISOString(): Returns the date as a string in the ISO format (YYYY-MM-DDTHH:mm:ss.sssZ).
+Working with Timestamps:
+getTime(): Returns the numeric value of the specified date as the number of milliseconds since January 1, 1970, 00:00:00 UTC.
+setTime(milliseconds): Sets the Date object to the time represented by a number of milliseconds since January 1, 1970, 00:00:00 UTC.
+These are some of the basic functionalities provided by the Date object in JavaScript. It's a powerful tool for dealing with dates and times in web development.
+
+## Day 3
+### Keyboard, Form, and Document or Window Events
+#### Keyboard Event
+
+
+
+keydown: This event occurs when a key is pressed down.
+
+keyup: This event occurs when a key is released.
+
+keypress: This event occurs when a key is pressed down and it produces a character value.
+
+
+<code>
+<body>
+    <input type="text" id="textInput">
+    <p id="output"></p>
+
+    <script>
+        // Get reference to input and output elements
+        var input = document.getElementById("textInput");
+        var output = document.getElementById("output");
+
+        // Event listener for keydown event
+        input.addEventListener("keydown", function(event) {
+            output.textContent = "Key pressed: " + event.key;
+        });
+
+        // Event listener for keyup event
+        input.addEventListener("keyup", function(event) {
+            output.textContent = "Key released: " + event.key;
+        });
+
+        // Event listener for keypress event
+        input.addEventListener("keypress", function(event) {
+            output.textContent = "Character typed: " + event.key;
+        });
+    </script>
+</body>
+</code>
+
+In this example:
+
+We have an input field where users can type.
+We attach event listeners to this input field for the keydown, keyup, and keypress events.
+When these events occur, the corresponding event handler functions are executed, updating the text content of the <p> element to reflect the user's keyboard interactions.
+We can use these keyboard events to create various interactive features on our web pages, such as form validation, autocomplete, or custom keyboard shortcuts.
 
 
 
