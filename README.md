@@ -1169,12 +1169,11 @@ keyup: This event occurs when a key is released.
 keypress: This event occurs when a key is pressed down and it produces a character value.
 
 
-<code>
-<body>
-    <input type="text" id="textInput">
-    <p id="output"></p>
+&lt;body&gt;
+    &lt;input type="text" id="textInput"&gt;
+   &lt;p id="output">&lt;/p&gt;
 
-    <script>
+    &lt;script&gt;
         // Get reference to input and output elements
         var input = document.getElementById("textInput");
         var output = document.getElementById("output");
@@ -1193,9 +1192,9 @@ keypress: This event occurs when a key is pressed down and it produces a charact
         input.addEventListener("keypress", function(event) {
             output.textContent = "Character typed: " + event.key;
         });
-    </script>
-</body>
-</code>
+   &lt;/script&gt;
+&lt;/body&gt;
+
 
 In this example:
 
