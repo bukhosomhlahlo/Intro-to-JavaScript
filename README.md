@@ -953,8 +953,9 @@ Ends with the end of the string.
 This regular expression provides a basic validation for email addresses. However, it's important to note that email address validation can be quite complex due to the variety of valid email formats and internationalization considerations. This regex does not cover all edge cases and may need to be adjusted based on specific requirements.
 
 # Week 3
-## Handling Events
-### String Operations
+## Day 1
+### Handling Events
+#### String Operations
 
 ##### Accessing Individual Characters in a String:
 You can access individual characters in a string using bracket notation ([]) or the charAt() method.
@@ -1105,6 +1106,10 @@ invalid event handler./td></tr>
 
 
 </table>
+
+
+## Day 2
+#### Dynamic HTML
 
 
 
