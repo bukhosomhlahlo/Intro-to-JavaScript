@@ -1086,6 +1086,23 @@ invalid event handler./td></tr>
 <tr><td>onmousewheel</td><td>Invoked when the media resource has been paused.</td></tr>
 <tr><td>onplay</td><td>Invoked when the media resource starts playback.</td></tr>
 
+<tr><td>onplaying</td><td>Playback has begun.</td></tr>
+<tr><td>onprogress</td><td>The browser/user agent is fetching media data.</td></tr>
+<tr><td>onratechange</td><td>Invoked when the playback rate has changed (i.e. either the defaultPlaybackRate or the playbackRate has just been updated).</td></tr>
+<tr><td>onreset</td><td>reset event handler.</td></tr>
+<tr><td>onseeked</td><td>Invoked when the seeking IDL attribute changed to false (i.e. the seeking attribute is no longer true)</td></tr>
+<tr><td>onseeking</td><td>Invoked when the seeking IDL attribute changed to true and the seek operation is taking long enough that the user agent has time to fire the event.</td></tr>
+<tr><td>onselect</td><td>Invoked when some or all of the contents of an object is selected. For example, the user selected some text within a text field.</td></tr>
+<tr><td>onshow</td><td>show event handler.</td></tr>
+<tr><td>oninstalled</td><td>Invoked when the browser/user agent is trying to fetch media data but the data has stalled (i.e. the data has stopped coming)..</td></tr>
+<tr><td>onsubmit</td><td>User submitted a form.</td></tr>
+<tr><td>onsuspend</td><td>The browser/user agent is (intentionally) not currently fetching media data, but has not yet downloaded the entire media resource (i.e. it has suspended the download).</td></tr>
+
+<tr><td>ontimeupdate</td><td>Invoked when the media's current playback position changed.</td></tr>
+<tr><td>ontoggle</td><td>Invoked when the details element is opened or closed.</td></tr>
+<tr><td>onvolumechange</td><td>Invoked when either the volume attribute or the muted attribute has changed.</td></tr>
+<tr><td>onwaiting</td><td>UThe next frame of the media is not yet available (but the browser/user agent expects it to become available).</td></tr>
+
 
 </table>
 
