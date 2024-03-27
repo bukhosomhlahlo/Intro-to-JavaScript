@@ -1170,7 +1170,7 @@ keypress: This event occurs when a key is pressed down and it produces a charact
 
 
 &lt;body&gt;
-    &lt;input type="text" id="textInput"&gt;
+    &lt;input type="text" id="textInput"&gt;<br>
    &lt;p id="output">&lt;/p&gt;
 
     &lt;script&gt;
