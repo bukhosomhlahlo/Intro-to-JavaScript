@@ -1036,12 +1036,12 @@ Here, we use addEventListener() to add a click event listener to the button elem
 
 Event Delegation: With event delegation, you attach a single event handler to a parent element, which will then handle events for its child elements. This is particularly useful when you have a large number of elements or dynamically generated content. For example:
 
-
-<ul id="myList">
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
-</ul>
+<code>
+&lt;ul id="myList"&gt;
+   &lt;li&gt;Item 1&lt;/li&gt;
+   &lt;li&gt;Item 2&lt;/li&gt;
+ &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
 
 const list = document.getElementById('myList');
 list.addEventListener('click', handleClick);
@@ -1050,7 +1050,7 @@ function handleClick(event) {
     if (event.target.tagName === 'LI') {
         // Event handling logic
     }
-}
+</code>
 Here, we attach a click event listener to the <ul> element, and the handleClick() function is called when any <li> element inside the list is clicked. We then check if the clicked element is an <li> before performing any action.
 Event handlers play a crucial role in building interactive web applications, allowing you to respond to user actions and create dynamic user experiences.
 
