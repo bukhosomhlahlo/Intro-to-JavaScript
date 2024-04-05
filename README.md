@@ -1441,6 +1441,39 @@ This code creates a simple image slider with previous and next navigation button
 
 You can add more images to the slider by adding additional `<img>` elements inside the `.slider-container` div.
 
+# Week 4
+## Day2
+###  Program Flowcharts, Loops and Decision structures 
+#### Program Flow Charts
+
+##### For Loops
+
+// Syntax: for (initialization; condition; iteration) { code block }
+
+// Example: Print numbers from 1 to 5
+for (let i = 1; i <= 5; i++) {
+  console.log(i);
+}
+
+// Output:
+// 1
+// 2
+// 3
+// 4
+// 5
+
+
+let i = 1 initializes the loop counter variable i to 1.
+i <= 5 is the condition that specifies when the loop should continue executing. As long as this condition is true, the loop will continue to run.
+i++ is the iteration statement that increments the value of i by 1 after each iteration.
+console.log(i) prints the value of i to the console during each iteration of the loop.
+The loop runs until the condition i <= 5 is no longer true.
+
+
+
+
+
+
 
 
 
